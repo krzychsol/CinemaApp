@@ -1,0 +1,13 @@
+<div class="watch-list-wrapper">
+    <h3 *ngIf="movies.length < 1">Loading...</h3>
+    <div class="tiles-wrapper">
+        <app-movie-tile
+            *ngFor="let movie of movies"
+            [posterImg]="movie.posterImg"
+            [id]="movie.id"
+            [title]="movie.title"
+            [description]="movie.description"
+            [durationTime]="movie.durationTime"
+        ></app-movie-tile>
+    </div>
+</div>

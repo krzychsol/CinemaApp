@@ -1,0 +1,41 @@
+<div class="form-container">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Zarejestruj się <span>| Formularz</span></h5>
+        <form [formGroup]="regForm" autocomplete="off" novalidate (ngSubmit)="registerUser()">
+            <div>
+                <label for="firstName">Imię:</label><br>
+                <input id="firstName" class="center-input" placeholder="Jan" [(ngModel)]="firstname" formControlName="firstname" required>
+                <div>
+                    <em *ngIf="validateControl('firstname') && hasError('firstname', 'required')">Hasło jest wymagane!</em>
+                </div>
+            </div>
+            <div>
+                <label for="lastName">Nazwisko:</label><br>
+                <input id="lastName" class="center-input" placeholder="Kowalski" [(ngModel)]="lastname" formControlName="lastname" required>
+                <div>
+                    <em *ngIf="validateControl('lastname') && hasError('lastname', 'required')">Hasło jest wymagane!</em>
+                </div>
+            </div>
+            <div>
+                <label for="email">E-mail:</label><br>
+                <input id="email" class="center-input" placeholder="jkowalski@example.com" [(ngModel)]="username" formControlName="email" required>
+                <div>
+                    <em *ngIf="validateControl('email') && hasError('email', 'email')">Prosze podać poprawny e-mail!</em>
+                    <em *ngIf="validateControl('email') && hasError('email', 'required')">Adres e-mail jest wymagany!</em>
+                </div>
+            </div>
+            <div>
+                <label for="password">Hasło:</label><br>
+                <input id="password" class="center-input" type="password" [(ngModel)]="password" formControlName="password">
+                <div>
+                    <em *ngIf="validateControl('password') && hasError('password', 'required')">Hasło jest wymagane!</em>
+                </div>
+            </div>
+            <div class="btn-wrapper">
+                <button class="btn" type="submit" [disabled]="!regForm.valid">ZAREJESTRUJ SIĘ</button>
+            </div>
+        </form>
+        </div>
+    </div>
+  </div>

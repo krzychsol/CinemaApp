@@ -1,0 +1,68 @@
+<!-- 
+        <p>Order summary:</p>
+        <table>
+                <tr>
+                        <th>
+                                <h1>Personal data</h1>
+                        </th>
+                        <th></th>
+                        <th>
+                                <h1>Movie data</h1>
+                        </th>
+                </tr>
+                <tr>
+                        <th>Data: </th>
+                        <th>Value: </th>
+                        <th>Data: </th>
+                        <th>Value: </th>
+                </tr>
+                <tr>
+                        <td>Name: </td>
+                        <td>{{user.Firstname}}</td>
+                        <td>Title: </td>
+                        <td>{{seance.movie.title}}</td>
+                </tr>
+                <tr>
+                        <td>Surname: </td>
+                        <td>{{user.Lastname}}</td>
+                </tr>
+                <tr>
+                        <td>E-mail: </td>
+                        <td>{{user.Username}}</td>
+                        <td>Duration time: </td>
+                        <td>{{seance.movie.durationTime}}</td>
+                </tr>
+        </table>
+
+        <table>
+                <tr>
+                        <th>
+                                <h1>Seance data: </h1>
+                        </th>
+                        <th></th>
+                </tr>
+                <tr>
+                        <th>Data: </th>
+                        <th>Value: </th>
+                </tr>
+                <tr>
+                        <td>Start: </td>
+                        <td>{{seance.startDate | date: 'dd.MM - hh:mm'}}</td>
+                </tr>
+                <tr>
+                        <td>Places: </td>
+                        <td>
+                                <ng-container *ngFor="let item of userPlaceList">
+                                        {{item.number}}
+                                </ng-container>
+                        </td>
+                </tr>
+        </table>
+        <hr>
+
+        <br>
+        <hr>
+        <div class="nav-buttons">
+                <!--<button class="btn btn-nav btn-warning btn-radius" (click)="onReturnClick()"><fa-icon [icon]="faArrowCircleLeft"></fa-icon> Return</button>-->
+                <!--<button class="btn btn-nav btn-success btn-radius" (click)="onConfirmClick()">Confirm</button>
+        </div>-->

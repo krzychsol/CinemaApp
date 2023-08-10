@@ -1,0 +1,12 @@
+<ng-container *ngIf="currentUser">
+  <div class="container">
+    <div class="row">
+      <div class="inner-main">
+        <h1 class="mb-4">Twój profil</h1>
+        <p><strong>Email:</strong> {{ currentUser.username }}</p>
+        <p><strong>Imię:</strong> {{ currentUser.firstname }}</p>
+        <p><strong>Nazwisko:</strong> {{ currentUser.lastname }}</p>
+      </div>
+    </div>
+  </div>
+</ng-container>

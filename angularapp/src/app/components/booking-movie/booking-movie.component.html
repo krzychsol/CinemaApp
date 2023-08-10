@@ -1,0 +1,11 @@
+<div id="container">
+    <h2 class="booking-title">Rezerwacja seansu</h2>
+    <div class="calendar">
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </div>
+    <app-seats-picker></app-seats-picker>
+</div>
+

@@ -1,0 +1,48 @@
+<div class="container">
+  <main class="innerContainer">
+    <div class="legend">
+      <span class="glyphicon glyphicon-print freeSeat"></span> FREE
+      <span class="glyphicon glyphicon-ban-circle reservedSeat padding-left"></span> TAKEN
+      <span class="glyphicon glyphicon-ok-sign selectedSeat padding-left"></span> SELECTED
+    </div>
+
+    <div class="screen"></div>
+    
+    <div *ngFor="let row of rows" style="margin-top:2%">
+      <span class="seat" *ngFor="let col of cols" (click)="seatClicked(row + col)"
+             style="margin-left:2%" ngSwitch="row + col">
+        <span *ngSwitchCase="'selected'" class="glyphicon glyphicon-ok-sign selectedSeat"></span>
+        <span *ngSwitchCase="'reserved'" class="glyphicon glyphicon-ban-circle reservedSeat"></span>
+        <span *ngSwitchDefault="" class="glyphicon glyphicon-print freeSeat"></span>
+      </span>
+    </div>
+
+    <div *ngIf="selected.length > 0" class="font14">
+      <div class="wordWrap">Rezerwujesz {{selected.length}} miejsc</div>
+    </div>
+
+    <div class="buttonBar">
+      <button (click)="clearSelected()" [disabled]="selected.length === 0" class="btn">Resetuj</button>
+      <button (click)="showSelected()" [disabled]="selected.length === 0" type="button" class="btn" data-toggle="modal" data-target="#myModal">Podsumowanie</button>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Podsumowanie</h4>
+          </div>
+          <div class="modal-body">
+            <p>Ilość biletów :{{tick}}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal">Zatwierdź</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>

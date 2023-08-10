@@ -1,0 +1,45 @@
+<div class="form-container">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Dodaj film <span>| Formularz</span></h5>
+            <form [formGroup]="addMovieForm">
+                <div>
+                    <label>Tytuł:</label><br>
+                    <input class="center-input" name="title" id="title" placeholder="King Kong" formControlName="title"
+                        required>
+                </div>
+                <div>
+                    <label>Opis:</label><br>
+                    <textarea class="center-input" placeholder="More information.." formControlName="description"
+                        required></textarea>
+                </div>
+                <div>
+                    <label>Plakat (plik):</label><br>
+                    <input
+                        class="center-input" 
+                        placeholder="king_kong.png" 
+                        formControlName="posterImg" 
+                        required>
+                </div>
+                <div>
+                    <label>Czas trwania:</label><br>
+                    <input 
+                        class="center-input" 
+                        type="number" 
+                        formControlName="durationTime"
+                        required>
+                </div>
+                <div class="btn-wrapper">
+                    <button 
+                    class="btn" 
+                    type="submit"
+                    (click)="submitForm()">
+                    DODAJ
+                </button>
+                </div>
+            </form>
+            <h5 *ngIf="showError">Wprowadź poprawne dane!</h5>
+            <h5 *ngIf="showOk">Poprawnie dodano film!</h5>
+        </div>
+    </div>
+</div>

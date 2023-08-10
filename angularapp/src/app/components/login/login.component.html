@@ -1,0 +1,26 @@
+<div class="form-container">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Zaloguj się <span>| Formularz</span></h5>
+        <form [formGroup]="loginForm" autocomplete="off" novalidate (ngSubmit)="loginUser()">
+            <div>
+                <label for="email">Username/E-mail:</label><br>
+                <input id="email" class="center-input" placeholder="pat@example.com" [(ngModel)]="email" formControlName="email" required>
+                <div>
+                    <em *ngIf="validateControl('email') && hasError('email', 'required')">E-mail jest wymagany!</em>
+                </div>
+            </div>
+            <div>
+                <label for="password">Hasło:</label><br>
+                <input id="password" class="center-input" type="password" [(ngModel)]="password" formControlName="password">
+                <div>
+                    <em *ngIf="validateControl('password') && hasError('password', 'required')">Należy wprowadzić hasło!</em>
+                </div>
+            </div>
+            <div class="btn-wrapper">
+                <button class="btn" type="submit" [disabled]="!loginForm.valid">ZALOGUJ SIĘ</button>
+            </div>
+        </form>
+        </div>
+    </div>
+  </div>

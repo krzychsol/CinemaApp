@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="cellphone-container">    
+        <div class="movie">       
+          <div class="movie-img">
+            <img [src]="'../../../assets/img/'+posterImg" [alt]="posterImg">
+          </div>
+          <div class="text-movie-cont">
+            <div class="mr-grid">
+              <div class="col1">
+                <h1>{{title | uppercase}}</h1>
+                <ul class="movie-gen">
+                  <li>{{ durationTime }} min.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mr-grid summary-row">
+              <div class="col2">
+                <h5>Opis:</h5>
+              </div>
+            </div>
+            <div class="mr-grid">
+              <div class="col1">
+                <p class="movie-description">{{ description }}</div>
+            </div>
+            <div class="mr-grid action-row">
+              <div class="col2" routerLink="/booking-movie"><div class="watch-btn"><h3>ZAREZERWUJ</h3></div>
+              </div>
+              <ng-container *ngIf="currentUser && currentUser.isAdmin == true">
+                <div class="col6 action-btn" (click)="deleteMovie()"><i class="material-icons">&#xE872;</i></div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+<div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <div class="nav-title">
+            <a class="nav-title-link" routerLink="/">{{ title }}</a> 
+        </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a routerLink="/movies">Filmy</a>
+      <ng-container *ngIf="currentUser && currentUser.isAdmin == true">
+        <a routerLink="/add-movie">Dodaj film</a>
+        <a routerLink="/users">Użytkownicy</a>
+        <a routerLink="/admin-panel">Panel Admina</a>
+      </ng-container>
+      <ng-container *ngIf="!currentUser">
+        <a routerLink="/login">Zaloguj się</a>
+        <a routerLink="/register">Zarejestruj się</a>
+      </ng-container>
+      <ng-container *ngIf="currentUser">
+        <a routerLink="/user-profile/:id">Twój profil</a>
+        <button class="btn" (click)="onLogout()">Wyloguj się</button>
+      </ng-container>
+    </div>
+  </div>
