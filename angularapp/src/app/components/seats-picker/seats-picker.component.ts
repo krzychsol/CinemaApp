@@ -14,7 +14,6 @@ export class SeatsPickerComponent {
   reserved: string[] = ['A2', 'A3', 'F5', 'F1', 'F2', 'F6', 'F7', 'F8', 'H1', 'H2', 'H3', 'H4'];
   selected: string[] = [];
   
-  //return status of each seat
   public getStatus(seatPos: string) {
     if (this.reserved.indexOf(seatPos) !== -1) {
       return 'reserved';
@@ -24,12 +23,10 @@ export class SeatsPickerComponent {
     return undefined;
   }
 
-  //clear handler
   public clearSelected() {
     this.selected = [];
   }
 
-  //click handler
   public seatClicked(seatPos: string) {
     var index = this.selected.indexOf(seatPos);
 
@@ -43,7 +40,6 @@ export class SeatsPickerComponent {
     }
   }
 
-  //Buy button handler
   public showSelected() {
     if (this.selected.length > 0) {
       this.tick = this.selected.length;

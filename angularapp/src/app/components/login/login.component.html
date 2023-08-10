@@ -4,7 +4,7 @@
         <h5 class="card-title">Zaloguj się <span>| Formularz</span></h5>
         <form [formGroup]="loginForm" autocomplete="off" novalidate (ngSubmit)="loginUser()">
             <div>
-                <label for="email">Username/E-mail:</label><br>
+                <label for="email">Login/E-mail:</label><br>
                 <input id="email" class="center-input" placeholder="pat@example.com" [(ngModel)]="email" formControlName="email" required>
                 <div>
                     <em *ngIf="validateControl('email') && hasError('email', 'required')">E-mail jest wymagany!</em>

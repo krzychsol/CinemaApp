@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\krzysztof.solecki\\source\\repos\\CinemaApp\\Cinema-App\\webapi\\webapi.csproj": {}
+    "C:\\Projects\\cinemaapp\\webapi\\webapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\krzysztof.solecki\\source\\repos\\CinemaApp\\Cinema-App\\webapi\\webapi.csproj": {
+    "C:\\Projects\\cinemaapp\\webapi\\webapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krzysztof.solecki\\source\\repos\\CinemaApp\\Cinema-App\\webapi\\webapi.csproj",
+        "projectUniqueName": "C:\\Projects\\cinemaapp\\webapi\\webapi.csproj",
         "projectName": "webapi",
-        "projectPath": "C:\\Users\\krzysztof.solecki\\source\\repos\\CinemaApp\\Cinema-App\\webapi\\webapi.csproj",
+        "projectPath": "C:\\Projects\\cinemaapp\\webapi\\webapi.csproj",
         "packagesPath": "C:\\Users\\krzysztof.solecki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krzysztof.solecki\\source\\repos\\CinemaApp\\Cinema-App\\webapi\\obj\\",
+        "outputPath": "C:\\Projects\\cinemaapp\\webapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krzysztof.solecki\\AppData\\Roaming\\NuGet\\NuGet.Config",

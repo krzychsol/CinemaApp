@@ -26,12 +26,7 @@ export class SeancesComponent {
      }
 
   onSeanceClick(id: number){
-    //console.log(this.movie.seances.find(e => e.id == id).startDate)
-    //console.log(Date.now())
-    //if(this.movie.seances.find(e => e.id == id).startDate.valueOf() > Date.now())
-      this.url = "seats/" + id;
-    //else
-    //  this.errorMessage = "This seance is out of date."
+    
   }
 
   onCancelClick(){
@@ -41,7 +36,7 @@ export class SeancesComponent {
 
   onNextClick(){
     if(!this.url){
-      this.error = "Please select any seance."
+      this.error = "Proszę wybrać seans!"
       return;
     }
     else{

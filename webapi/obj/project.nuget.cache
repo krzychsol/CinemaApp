@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0vj1G1MgFMgWaZxMAO3LE3+OBWMFSqcJJGN+i+DPFaw99cFfRR2mcdy5LCil1NzgR6okXG91jvri3wwlcEBwLg==",
+  "dgSpecHash": "w/ciuWbjnQlxMo8+dkRcDp3tXtvNhHGo1aQ6Q0HZWAe6nQ0Y1tm4LfBXDrl8c2M4aPrNNtL0f3JCtuDfeEmELQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\krzysztof.solecki\\source\\repos\\CinemaApp\\Cinema-App\\webapi\\webapi.csproj",
+  "projectFilePath": "C:\\Projects\\cinemaapp\\webapi\\webapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krzysztof.solecki\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\krzysztof.solecki\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

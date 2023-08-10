@@ -10,10 +10,9 @@ import { filter } from 'rxjs/operators';
 import { Reservation } from 'src/app/models/reservation.model';
 
 interface UsersFilter{
-  name: string;
-  surname: string;
-  email: string;
-  //isAdmin: boolean;
+  firstname: string;
+  lastname: string;
+  username: string;
 }
 
 @Component({
@@ -28,10 +27,9 @@ export class UsersComponent implements OnInit {
   users!: MatTableDataSource<User>
   displayedColumns: string[] = ['Imię', 'Nazwisko', 'Email', 'Reserwacje', 'Admin']
 
-  nameFilter!: string;
-  surnameFilter!: string;
-  emailFilter!: string;
-  //isAdminFilter: boolean;
+  firstnameFilter!: string;
+  lastnameFilter!: string;
+  usernameFilter!: string;
 
   constructor(private userService: UsersService, public dialog: MatDialog) { }
 
@@ -52,18 +50,18 @@ export class UsersComponent implements OnInit {
       this.users.filterPredicate = (data, filter) =>
       {
         var filters = JSON.parse(filter) as UsersFilter;
-        return data.firstname.toLocaleLowerCase().startsWith(filters.name.toLocaleLowerCase()) &&
-        data.lastname.toLocaleLowerCase().startsWith(filters.surname.toLocaleLowerCase()) &&
-        data.username.toLocaleLowerCase().startsWith(filters.email.toLocaleLowerCase());
+        return data.firstname.toLocaleLowerCase().startsWith(filters.firstname.toLocaleLowerCase()) &&
+        data.lastname.toLocaleLowerCase().startsWith(filters.lastname.toLocaleLowerCase()) &&
+        data.username.toLocaleLowerCase().startsWith(filters.username.toLocaleLowerCase());
       }
     });
   }
 
   applyFilter(){
     this.users.filter = JSON.stringify({
-      name: this.nameFilter ? this.nameFilter : '',
-      surname: this.surnameFilter ? this.surnameFilter : '',
-      email: this.emailFilter ? this.emailFilter : '',
+      firstname: this.firstnameFilter ? this.firstnameFilter : '',
+      lastname: this.lastnameFilter ? this.lastnameFilter : '',
+      username: this.usernameFilter ? this.usernameFilter : '',
     } as UsersFilter);
   }
 }

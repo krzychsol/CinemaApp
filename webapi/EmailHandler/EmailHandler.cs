@@ -31,7 +31,7 @@ namespace webapi.EmailHandler
                 };
             }
 
-            message.To.Add(new MailboxAddress("Client", "pawel.dziwura@stazysta.comarch.pl"));
+            message.To.Add(new MailboxAddress("Klient", "krzysztof.solecki@stazysta.comarch.pl"));
 
             using (var client = new SmtpClient())
             {
