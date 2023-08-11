@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Npgsql;
 using System.Text;
 using webapi.Database.Repository;
 using webapi.Models;
@@ -14,6 +15,8 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddDbContext<CinemaDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("CinemaConnectionString")));
+
+Npgsql.NpgsqlConnection.GlobalTypeMapper.UseNodaTime();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();

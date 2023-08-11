@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Database",
+    "\\Database\\Repository",
+    "\\EmailHandler",
+    "\\Helpers",
+    "\\Migrations"
+  ],
+  "SelectedNode": "\\Database\\Repository\\SeanceRepository.cs",
+  "PreviewInSolutionExplorer": false
+}

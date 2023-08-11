@@ -13,15 +13,16 @@ namespace webapi.Database.Repository
         }
         public string AddSeance(Seance seance)
         {
-            var HasAnyColideSeance = _context.Seances.Any(s => (
-                (s.StartDate < seance.EndDate && s.EndDate > seance.EndDate) ||
-                (s.EndDate > seance.StartDate && s.EndDate < seance.EndDate) ||
-                (s.StartDate > seance.StartDate && s.EndDate < seance.EndDate)
-            ));
-
+            // var HasAnyColideSeance = _context.Seances.Any(s => (
+            //     (s.StartDate < seance.EndDate && s.EndDate > seance.EndDate) ||
+            //     (s.EndDate > seance.StartDate && s.EndDate < seance.EndDate) ||
+            //     (s.StartDate > seance.StartDate && s.EndDate < seance.EndDate)
+            // ));
+            var HasAnyColideSeance = false;
             if (!HasAnyColideSeance)
             {
                 _context.Movies.Attach(seance.Movie);
+                Console.WriteLine(seance);
                 _context.Seances.Add(seance);
                 _context.SaveChanges();
                 return null;

@@ -530,3 +530,5 @@ C:\Projects\cinemaapp\webapi\obj\Debug\net7.0\refint\webapi.dll
 C:\Projects\cinemaapp\webapi\obj\Debug\net7.0\webapi.pdb
 C:\Projects\cinemaapp\webapi\obj\Debug\net7.0\webapi.genruntimeconfig.cache
 C:\Projects\cinemaapp\webapi\obj\Debug\net7.0\ref\webapi.dll
+C:\Projects\cinemaapp\webapi\bin\Debug\net7.0\NodaTime.dll
+C:\Projects\cinemaapp\webapi\bin\Debug\net7.0\Npgsql.NodaTime.dll
