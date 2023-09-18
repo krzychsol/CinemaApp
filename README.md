@@ -12,7 +12,7 @@ Wykaz funkcjonalności:
 - [x] Strona jest responsywna
 - [x] Galeria wykazu filmów
 - [x] Widok rezerwacji biletów
-- [x] Dodany Gurad przed wejściem do ścieżek niebedac zalogowanym 
+- [x] Dodany Guard przed wejściem do ścieżek niebedac zalogowanym 
 - [ ] Logika po stronie frontendu do obsługi rezerwacji biletów i anulowania rezerwacji
 - [ ] Możliwość edycji filmu i użytkownika przez administratora
 - [ ] Możliwość tworzenia harmonogramu seansów przez admina
